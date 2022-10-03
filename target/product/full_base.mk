@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # Additional settings used in all AOSP builds
-ifeq ($(DOT_BUILD),)
+ifeq ($(NAIKA_BUILD),)
 PRODUCT_VENDOR_PROPERTIES := \
     ro.config.ringtone?=Ring_Synth_04.ogg \
     ro.config.notification_sound?=pixiedust.ogg
@@ -53,7 +53,7 @@ endif
 PRODUCT_LOCALES := en_US
 
 # Get some sounds
-ifeq ($(DOT_BUILD),)
+ifeq ($(NAIKA_BUILD),)
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
 endif
 

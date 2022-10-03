@@ -85,7 +85,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.carrier?=unknown
 
-ifeq ($(DOT_BUILD),)
+ifeq ($(NAIKA_BUILD),)
 PRODUCT_VENDOR_PROPERTIES := \
     ro.config.notification_sound?=OnTheHunt.ogg \
     ro.config.alarm_alert?=Alarm_Classic.ogg

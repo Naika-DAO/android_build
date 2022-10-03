@@ -316,8 +316,8 @@ include $(BUILD_SYSTEM)/envsetup.mk
 # See envsetup.mk for a description of SCAN_EXCLUDE_DIRS
 FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(SCAN_EXCLUDE_DIRS) .repo .git)
 
-ifneq ($(DOT_BUILD),)
-include vendor/dot/config/BoardConfigDot.mk
+ifneq ($(NAIKA_BUILD),)
+include vendor/naika/config/BoardConfigDot.mk
 endif
 
 # The build system exposes several variables for where to find the kernel
@@ -1163,7 +1163,7 @@ dont_bother_goals := out \
 # consistency with those defined in BoardConfig.mk files.
 include $(BUILD_SYSTEM)/android_soong_config_vars.mk
 
-ifneq ($(DOT_BUILD),)
+ifneq ($(NAIKA_BUILD),)
 ifneq ($(wildcard device/dot/sepolicy/common/sepolicy.mk),)
 ## We need to be sure the global selinux policies are included
 ## last, to avoid accidental resetting by device configs
