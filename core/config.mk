@@ -357,7 +357,7 @@ FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(SCAN_EXCLUDE_DIRS) .repo .git)
 
 -include vendor/extra/BoardConfigExtra.mk
 ifneq ($(NAIKA_BUILD),)
-include vendor/naika/config/BoardConfigNaikat.mk
+include vendor/naika/config/BoardConfigNaika.mk
 endif
 
 # The build system exposes several variables for where to find the kernel
