@@ -153,8 +153,8 @@ function check_product()
         echo "Couldn't locate the top of the tree.  Try setting TOP." >&2
         return
     fi
-    if (echo -n $1 | grep -q -e "^dot_") ; then
-        NAIKA_BUILD=$(echo -n $1 | sed -e 's/^dot_//g')
+    if (echo -n $1 | grep -q -e "^naika_") ; then
+        NAIKA_BUILD=$(echo -n $1 | sed -e 's/^naika_//g')
     else
         NAIKA_BUILD=
     fi
